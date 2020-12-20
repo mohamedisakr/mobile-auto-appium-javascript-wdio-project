@@ -24,7 +24,7 @@ capabilities: [
       platformName: "Android",
       platformVersion: "11.0",
       deviceName: "Pixel_2_API_30",
-      app: join(process.cwd(), "./ApiDemos-debug.apk"),
+      app: join(process.cwd(), "./app/Android-NativeDemoApp-0.2.1.apk"),
     }
 ]
 ```
@@ -43,6 +43,6 @@ type: adb devices
   "platformName": "Android",
   "platformVersion": "11",
   "deviceName": "Pixel_2_API_30",
-  "app": "E:\\Projects\\mobile-auto-appium-javascript-wdio-project\\Android-NativeDemoApp-0.2.1.apk"
+  "app": "E:\\Projects\\mobile-auto-appium-javascript-wdio-project\\app\\Android-NativeDemoApp-0.2.1.apk"
 }
 ```
