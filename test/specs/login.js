@@ -7,16 +7,6 @@ describe("login page", () => {
   beforeEach(() => {});
 
   it("Verify that the text entry login page username & password fields are editable", () => {
-    // auth.login("Actual User", "Test Pass");
-    // let text = auth.$email.getText();
-    // console.log(text);
-    // expect(text).equal("Actual User");
-    // // auth.dialogOkBtn.click();
-
-    // auth.$email.setValue("Actual User");
-    // auth.$password.setValue("Test Pass");
-    // auth.$loginButton.click();
-
     home.$loginButton.click();
     auth.login("Actual User", "Test Pass");
     let text = auth.$email.getText();

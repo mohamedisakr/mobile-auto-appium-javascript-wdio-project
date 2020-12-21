@@ -33,6 +33,8 @@ capabilities: [
 
 1. type: cd C:\Users\STC\AppData\Local\Android\Sdk\emulator
 2. type: emulator -avd Pixel_2_API_30 (emulator name)
+   or
+   type: emulator -avd Pixel_2_API_30 -no-snapshot-load
 
 ### List all up and running emulator/devices
 
