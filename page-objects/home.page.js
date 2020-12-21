@@ -1,8 +1,6 @@
 class Home {
   get $loginButton() {
-    return $(
-      "//android.view.ViewGroup[@content-desc='Login']/android.view.ViewGroup"
-    );
+    return $("~Login");
   }
 }
 module.exports = new Home();
