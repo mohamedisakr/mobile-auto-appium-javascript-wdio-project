@@ -54,7 +54,7 @@ exports.config = {
     {
       platformName: "Android",
       platformVersion: "11.0",
-      deviceName: "Pixel_2_API_30",
+      deviceName: "coti", // "Pixel_2_API_30",
       app: join(process.cwd(), "./app/Android-NativeDemoApp-0.2.1.apk"),
 
       //   // maxInstances can get overwritten per capability. So if you have an in-house Selenium
