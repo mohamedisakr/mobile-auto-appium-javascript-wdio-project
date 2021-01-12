@@ -23,8 +23,9 @@ capabilities: [
     {
       platformName: "Android",
       platformVersion: "11.0",
-      deviceName: "Pixel_2_API_30",
-      app: join(process.cwd(), "./app/Android-NativeDemoApp-0.2.1.apk"),
+      deviceName: "coti",
+      appPackage: "com.wdiodemoapp",
+      appActivity: ".MainActivity",
     }
 ]
 ```

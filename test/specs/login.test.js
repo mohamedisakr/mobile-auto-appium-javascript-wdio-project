@@ -4,7 +4,7 @@ const {
   login,
   getEmailText,
 } = require("../../services/auth.services");
-
+/*
 describe("login page", () => {
   // Execute a block of code before every test
   beforeEach(() => {
@@ -25,3 +25,4 @@ describe("login page", () => {
     // expect(text).equal("Actual User");
   });
 });
+*/

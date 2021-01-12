@@ -52,10 +52,18 @@ exports.config = {
   //
   capabilities: [
     {
+      // new
       platformName: "Android",
       platformVersion: "11.0",
-      deviceName: "coti", // "Pixel_2_API_30",
-      app: join(process.cwd(), "./app/Android-NativeDemoApp-0.2.1.apk"),
+      deviceName: "coti",
+      appPackage: "com.wdiodemoapp",
+      appActivity: ".MainActivity",
+
+      // // old
+      // platformName: "Android",
+      // platformVersion: "11.0",
+      // deviceName: "coti", // "Pixel_2_API_30",
+      // app: join(process.cwd(), "./app/Android-NativeDemoApp-0.2.1.apk"),
 
       //   // maxInstances can get overwritten per capability. So if you have an in-house Selenium
       //   // grid with only 5 firefox instances available you can make sure that not more than

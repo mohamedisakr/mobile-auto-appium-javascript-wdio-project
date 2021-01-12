@@ -1,21 +1,21 @@
 class Home {
-  get $loginButton() {
-    return $("~Login");
+  get $homeButton() {
+    return $("~Home");
   }
 
   get $viewButton() {
     return $("~WebView");
   }
 
-  get $homeButton() {
-    return $("~WebHome");
+  get $loginButton() {
+    return $("~Login");
   }
 
-  get formsButton() {
+  get $formsButton() {
     return $("~Forms");
   }
 
-  get swipeButton() {
+  get $swipeButton() {
     return $("~Swipe");
   }
 }
