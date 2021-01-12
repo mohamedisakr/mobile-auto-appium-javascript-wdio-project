@@ -48,3 +48,19 @@ type: adb devices
   "app": "E:\\Projects\\mobile-auto-appium-javascript-wdio-project\\app\\Android-NativeDemoApp-0.2.1.apk"
 }
 ```
+
+### To install application in emulator
+
+1. type
+   `adb -s emulator-name install "path\to\file"`
+   example adb -s emulator-5554 install "E:\Projects\mobile-auto-appium-javascript-wdio-project\app\Android-NativeDemoApp-0.2.1.apk"
+
+### To get appActivity & appPackage
+
+1. type
+   adb -s emulator-name logcat > logcat-file-name.txt
+   adb -s emulator-5554 logcat > appActivity.txt
+2. open the app in emulator
+3. stop the command (using Ctrl + C)
+4. type cat appActivity.txt
+5. search for activity
