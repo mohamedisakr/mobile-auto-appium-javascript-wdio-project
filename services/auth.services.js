@@ -1,18 +1,19 @@
-const home = require("../page-objects/home.page");
+// const home = require("../page-objects/home.page");
 const auth = require("../page-objects/auth.page");
 
-function pressLogin() {
-  home.$loginButton.click();
-}
-
-function login(email, password) {
+function login(user) {
+  const { email, password } = user;
   auth.$email.setValue(email);
   auth.$password.setValue(password);
   auth.$loginButton.click();
 }
 
 function getEmailText() {
-  return auth.$email.getText();
+  return auth.$email.getValue();
 }
 
-module.exports = { pressLogin, login, getEmailText };
+module.exports = { login, getEmailText };
+
+// function pressLogin() {
+//   home.$loginButton.click();
+// }

@@ -3,6 +3,7 @@ import {
   isHomeButtonDisplayed,
 } from "../../services/home.services";
 
+/*
 describe("Home page", () => {
   it("test home button", () => {
     expect(isHomeButtonDisplayed()).toBe(true);
@@ -10,3 +11,4 @@ describe("Home page", () => {
     browser.pause(3000);
   });
 });
+*/

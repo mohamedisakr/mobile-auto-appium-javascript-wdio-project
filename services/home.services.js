@@ -4,8 +4,12 @@ const handleClickHomeButton = () => {
   home.$homeButton.click();
 };
 
+const handleClickLoginButton = () => {
+  home.$loginButton.click();
+};
+
 const isHomeButtonDisplayed = () => {
   return home.$homeButton.isDisplayed();
 };
 
-export { handleClickHomeButton, isHomeButtonDisplayed };
+export { handleClickHomeButton, handleClickLoginButton, isHomeButtonDisplayed };
