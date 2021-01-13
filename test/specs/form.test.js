@@ -4,6 +4,7 @@ import {
   setInputText,
   getInputText,
   getResultText,
+  handleClickSwitch,
 } from "../../services/form.services";
 
 const expect = chai.expect;
@@ -16,6 +17,7 @@ describe.only("form page", () => {
     handleClickFormButton();
   });
 
+  /*
   it("Verify that text as in text result", () => {
     // 2. setValue from input text
     setInputText("salam");
@@ -25,6 +27,11 @@ describe.only("form page", () => {
     const expected = getResultText();
     driver.pause(3000);
     expect(actual).to.be.equal(expected);
+  });
+  */
+
+  it("Toggle switch button", () => {
+    handleClickSwitch();
   });
 });
 // */

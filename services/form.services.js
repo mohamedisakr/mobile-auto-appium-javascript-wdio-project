@@ -15,4 +15,8 @@ const getResultText = () => {
   form.$inputTextResult.getText();
 };
 
-export { setInputText, getInputText, getResultText };
+const handleClickSwitch = () => {
+  form.$switchButton.click();
+};
+
+export { setInputText, getInputText, getResultText, handleClickSwitch };
