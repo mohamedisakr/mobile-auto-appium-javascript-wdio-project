@@ -5,7 +5,7 @@ import { validUser, invalidUser } from "../../fixtures/credentials";
 
 const expect = chai.expect;
 
-// /*
+/*
 describe("login page", () => {
   // Execute a block of code before every test
   beforeEach(() => {
@@ -25,6 +25,7 @@ describe("login page", () => {
 
   it("Verify that valid username & valid password should login", () => {
     login(validUser);
+    driver.pause(3000);
   });
 });
 // */

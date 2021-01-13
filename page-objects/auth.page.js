@@ -14,5 +14,5 @@ class Auth {
   }
 }
 
-// export default new Auth();
 module.exports = new Auth();
+// export default new Auth();

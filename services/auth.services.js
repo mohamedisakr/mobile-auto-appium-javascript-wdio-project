@@ -13,7 +13,3 @@ function getEmailText() {
 }
 
 module.exports = { login, getEmailText };
-
-// function pressLogin() {
-//   home.$loginButton.click();
-// }

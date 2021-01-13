@@ -8,8 +8,17 @@ const handleClickLoginButton = () => {
   home.$loginButton.click();
 };
 
+const handleClickFormButton = () => {
+  home.$formsButton.click();
+};
+
 const isHomeButtonDisplayed = () => {
   return home.$homeButton.isDisplayed();
 };
 
-export { handleClickHomeButton, handleClickLoginButton, isHomeButtonDisplayed };
+export {
+  handleClickHomeButton,
+  handleClickLoginButton,
+  handleClickFormButton,
+  isHomeButtonDisplayed,
+};
