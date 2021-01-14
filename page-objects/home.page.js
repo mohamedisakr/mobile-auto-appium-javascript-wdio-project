@@ -19,4 +19,6 @@ class Home {
     return $("~Swipe");
   }
 }
-module.exports = new Home();
+
+// module.exports = new Home();
+export default new Home();

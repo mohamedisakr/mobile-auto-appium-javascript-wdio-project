@@ -19,4 +19,20 @@ const handleClickSwitch = () => {
   form.$switchButton.click();
 };
 
-export { setInputText, getInputText, getResultText, handleClickSwitch };
+const takeScreenshotForSwitch = () => {
+  let fileName = Date.now();
+  form.$switchButton.saveScreenshot(`./screenshots/switch-${fileName}.png`);
+};
+
+const handleClickActiveButton = () => {
+  form.$buttonActive.click();
+};
+
+export {
+  setInputText,
+  getInputText,
+  getResultText,
+  handleClickSwitch,
+  takeScreenshotForSwitch,
+  handleClickActiveButton,
+};

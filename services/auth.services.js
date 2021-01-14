@@ -1,4 +1,3 @@
-// const home = require("../page-objects/home.page");
 const auth = require("../page-objects/auth.page");
 
 function login(user) {
@@ -12,4 +11,4 @@ function getEmailText() {
   return auth.$email.getValue();
 }
 
-module.exports = { login, getEmailText };
+export { login, getEmailText };

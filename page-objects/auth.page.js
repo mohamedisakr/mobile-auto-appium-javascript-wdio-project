@@ -1,18 +1,15 @@
-import { EMAIL, PASSWORD, LOGIN_BUTTON } from "../selectors/auth.selectors";
+import { EMAIL, PASSWORD } from "../selectors/auth.selectors";
 
 class Auth {
   get $email() {
-    return $(EMAIL); //"~input-email"
+    return $(EMAIL);
   }
 
   get $password() {
-    return $(PASSWORD); //"~input-password"
-  }
-
-  get $loginButton() {
-    return $(LOGIN_BUTTON); // "~button-LOGIN"
+    return $(PASSWORD);
   }
 }
+export default Auth;
 
-module.exports = new Auth();
+// module.exports = new Auth();
 // export default new Auth();
