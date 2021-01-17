@@ -1,6 +1,6 @@
 const users = {
   validUser: { email: "tamil@mit.edu", password: "1234tamil" },
-  invalidUser: { email: "@mit.edu", password: "coticoti" },
+  invalidUser: { email: "", password: "coticoti" }, // @mit.edu
   allEmpty: { email: "", password: "" },
 };
 

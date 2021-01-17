@@ -25,7 +25,19 @@ class LoginServices {
     loginMessagePopup.$okButton.click();
   }
 
-  verifyLoginUnSuccessfully() {}
+  verifyLoginUnSuccessfully() {
+    if (!this.email && this.password.length >= 8) {
+      expect(loginPage.isInvalidEmailMessageDisplayed()).toBe(true);
+      expect(loginPage.isInvalidPasswordMessageDisplayed()).toBe(false);
+    } else if (this.email.length > 0 && this.password.length < 8) {
+      expect(loginPage.isInvalidEmailMessageDisplayed()).toBe(false);
+      expect(loginPage.isInvalidPasswordMessageDisplayed()).toBe(true);
+    } else {
+      expect(loginPage.isInvalidEmailMessageDisplayed()).toBe(true);
+      expect(loginPage.isInvalidPasswordMessageDisplayed()).toBe(true);
+    }
+  }
+
   // getEmailText() {
   //   return loginPage.$email.getValue();
   // }

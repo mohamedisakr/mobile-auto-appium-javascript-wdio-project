@@ -7,19 +7,21 @@ const expect = chai.expect;
 
 // /*
 describe("login page", () => {
-  // Execute a block of code before every test
+  // // Execute a block of code before every test
   beforeEach(() => {
     navbarServices.handleClickLoginButton();
   });
 
-  it("Verify that invalid username & invalid password should raise an error", () => {
-    const loginServices = new LoginServices(invalidUser);
-    loginServices.login().verifyLoginUnSuccessfully();
-  });
-
   it("Verify that valid username & valid password should login", () => {
+    // navbarServices.handleClickLoginButton();
     const loginServices = new LoginServices(validUser);
     loginServices.login().verifyLoginSuccessfully();
+  });
+
+  it("Verify that invalid username & invalid password should raise an error", () => {
+    // navbarServices.handleClickLoginButton();
+    const loginServices = new LoginServices(invalidUser);
+    loginServices.login().verifyLoginUnSuccessfully();
   });
 });
 // */
