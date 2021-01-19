@@ -18,10 +18,11 @@ describe("login page", () => {
     loginServices.login().verifyLoginSuccessfully();
   });
 
-  it("Verify that invalid username & invalid password should raise an error", () => {
-    // navbarServices.handleClickLoginButton();
-    const loginServices = new LoginServices(invalidUser);
-    loginServices.login().verifyLoginUnSuccessfully();
-  });
+  // // TODO: Postpone this test # 26
+  // it("Verify that invalid username & invalid password should raise an error", () => {
+  //   // navbarServices.handleClickLoginButton();
+  //   const loginServices = new LoginServices(invalidUser);
+  //   loginServices.login().verifyLoginUnSuccessfully();
+  // });
 });
 // */
