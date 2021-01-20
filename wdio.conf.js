@@ -1,4 +1,6 @@
-const { join } = require("path");
+const allure = require("allure-commandline");
+// const allure = require("@wdio/allure-reporter");
+// const { join } = require("path");
 
 exports.config = {
   //
@@ -150,6 +152,27 @@ exports.config = {
   // The only one supported by default is 'dot'
   // see also: https://webdriver.io/docs/dot-reporter.html
   reporters: ["spec"],
+  reporters: [
+    [
+      "allure",
+      {
+        outputDir: "allure-results",
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
+        // disableMochaHooks: true,
+      },
+    ],
+  ],
+  // reporters: [
+  //   [
+  //     "allure",
+  //     {
+  //       outputDir: "allure-results",
+  //       disableWebdriverStepsReporting: true,
+  //       disableMochaHooks: true,
+  //     },
+  //   ],
+  // ],
 
   //
   // Options to be passed to Mocha.
@@ -239,6 +262,15 @@ exports.config = {
    */
   // afterTest: function(test, context, { error, result, duration, passed, retries }) {
   // },
+  afterTest: function (
+    test,
+    context,
+    { error, result, duration, passed, retries }
+  ) {
+    if (error) {
+      browser.takeScreenshot();
+    }
+  },
 
   /**
    * Hook that gets executed after the suite has ended
@@ -282,6 +314,24 @@ exports.config = {
    */
   // onComplete: function(exitCode, config, capabilities, results) {
   // },
+  onComplete: function () {
+    const reportError = new Error("Could not generate Allure report");
+    const generation = allure(["generate", "allure-results", "--clean"]);
+    return new Promise((resolve, reject) => {
+      const generationTimeout = setTimeout(() => reject(reportError), 10000);
+
+      generation.on("exit", function (exitCode) {
+        clearTimeout(generationTimeout);
+
+        if (exitCode !== 0) {
+          return reject(reportError);
+        }
+
+        console.log("Allure report successfully generated");
+        resolve();
+      });
+    });
+  },
   /**
    * Gets executed when a refresh happens.
    * @param {String} oldSessionId session ID of the old session
