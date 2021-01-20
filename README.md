@@ -1,5 +1,12 @@
 ## Appium Mobile Automation using JavaScript Fundamentals
 
+### To run allure report
+
+1. Install http-server by typing npm install -g http-server
+2. Change into your working directory, where yoursome.html lives
+3. Start your http server by issuing http-server -c-1
+4. This spins up a Node.js httpd which serves the files in your directory as static files accessible from http://localhost:8080
+
 ### Pre-Installation
 
 1.
